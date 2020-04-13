@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './shared/components/admin-layout/admin-layout.component';
@@ -6,14 +6,16 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditePageComponent } from './edite-page/edite-page.component';
-import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
         AdminLayoutComponent, 
         DashboardPageComponent, 
         CreatePageComponent, 
-        EditePageComponent
+        EditePageComponent,
+        LoginPageComponent
     ],
     imports: [
         CommonModule,
@@ -31,6 +33,7 @@ import { FormsModule, ReactiveFormsModule} from "@angular/forms";
                 ]
             }
         ])
+        
     ],
     exports: [RouterModule]
 })
