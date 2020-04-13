@@ -6,6 +6,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditePageComponent } from './edite-page/edite-page.component';
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -16,6 +17,8 @@ import { EditePageComponent } from './edite-page/edite-page.component';
     ],
     imports: [
         CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
         RouterModule.forChild([
             {
                 path: '', component: AdminLayoutComponent, children: [
