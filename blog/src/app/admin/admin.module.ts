@@ -7,6 +7,7 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditePageComponent } from './edite-page/edite-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
+        SharedModule,
         RouterModule.forChild([
             {
                 path: '', component: AdminLayoutComponent, children: [
