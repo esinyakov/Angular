@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss']
+  styleUrls: ['./login-page.component.scss'],
+  providers: [AuthService]
 })
 export class LoginPageComponent implements OnInit {
 
@@ -38,7 +39,7 @@ export class LoginPageComponent implements OnInit {
 
     const user: User = {
       email: this.form.value.email,
-      password: this.form.value.email
+      password: this.form.value.password
     }
 
     this.auth.login(user).subscribe(()=>{
