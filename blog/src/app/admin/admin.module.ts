@@ -9,7 +9,6 @@ import { EditePageComponent } from './edite-page/edite-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { AuthGuard } from './shared/services/auth.guard';
-import { AuthService } from './shared/services/auth.service';
 
 
 @NgModule({
@@ -40,7 +39,7 @@ import { AuthService } from './shared/services/auth.service';
         
     ],
     exports: [RouterModule],
-    providers: [AuthGuard,AuthService]
+    providers: [AuthGuard]
 })
 
 export class AdminModule {
