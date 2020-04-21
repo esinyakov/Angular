@@ -4,6 +4,7 @@ import { PostsService } from 'src/app/shared/posts.service';
 import { switchMap } from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Post } from '../shared/interfaces';
+import { AlertService } from '../shared/services/alert.service';
 
 @Component({
   selector: 'app-edite-page',
@@ -18,7 +19,8 @@ export class EditePageComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private postService: PostsService
+    private postService: PostsService,
+    private alert: AlertService
   ) { 
   }
 
@@ -49,6 +51,7 @@ export class EditePageComponent implements OnInit {
       title: this.form.value.title
     }).subscribe( ()=>{
       this.submitted = false
+      this.alert.success('Пост был обновлен')
     })
   }
 
